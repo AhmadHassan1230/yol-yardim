@@ -217,3 +217,15 @@
     map.forEach((_, id) => { const el = document.getElementById(id); if (el) io.observe(el); });
   }
 })();
+
+/* atölye reels: play only while visible, never under reduced motion */
+(() => {
+  const vids = [...document.querySelectorAll('video[data-autoplay]')];
+  if (!vids.length || document.documentElement.classList.contains('rm') || !('IntersectionObserver' in window)) return;
+  const io = new IntersectionObserver((entries) => entries.forEach((e) => {
+    const v = e.target;
+    if (e.isIntersecting) { if (v.preload === 'none') { v.preload = 'auto'; v.load(); } v.play().catch(() => {}); }
+    else v.pause();
+  }), { threshold: 0.35 });
+  vids.forEach((v) => io.observe(v));
+})();
