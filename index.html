@@ -19,7 +19,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300..800&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/site.css?v=4">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"AutomotiveBusiness","name":"Kirli Usta","telephone":"+905517150138","url":"https://www.kirliusta.com","areaServed":"İstanbul","image":"https://www.kirliusta.com/assets/img/ku-usta-brand.webp","slogan":"Usta var, dert yok.","openingHoursSpecification":{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"00:00","closes":"23:59"}}</script>
-<link rel="stylesheet" href="assets/flow.css?v=1">
+<link rel="stylesheet" href="assets/flow.css?v=3">
 </head>
 <body class="is-home">
 <a class="skip" href="#main">İçeriğe geç</a>
@@ -96,11 +96,12 @@
 <main id="main">
 
 <section class="fstage" id="top" aria-labelledby="hero-title">
-  <div class="fpin">
-    <canvas class="film" aria-hidden="true"></canvas>
-    <video class="fvideo" muted playsinline loop preload="auto" aria-hidden="true" hidden></video>
-    <div class="fscrim" aria-hidden="true"></div>
+  <video class="fvideo" muted playsinline loop preload="auto" poster="assets/video/hero.webp" data-hero-video
+    data-src="assets/video/hero.mp4" data-src-m="assets/video/hero-m.mp4" data-poster-m="assets/video/hero-m.webp"
+    aria-label="Gece yolda kalan araç, gelen servis, yerinde onarım ve yola devam"></video>
+  <div class="fscrim" aria-hidden="true"></div>
 
+  <div class="wrap fstage-in">
     <div class="fhero">
       <p class="live"><span class="live-dot" aria-hidden="true"></span><span>Şu an açığız · <time data-clock>00:00</time></span></p>
       <h1 id="hero-title" class="h1">Yolda kaldın mı?<br><span>Geliyoruz.</span></h1>
@@ -108,36 +109,30 @@
       <div class="cta"><a class="btn btn-signal btn-lg" href="tel:+905517150138"><svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg><span>Hemen ara</span></a><a class="btn btn-light btn-lg" href="https://wa.me/905517150138?text=Merhaba%20Kirli%20Usta%2C%20arac%C4%B1m%20i%C3%A7in%20yard%C4%B1m%20rica%20ediyorum." target="_blank" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg><span>WhatsApp'tan yaz</span></a></div>
     </div>
 
-    <figure class="floc" aria-hidden="true">
-      <div class="floc-map">
-        <svg viewBox="0 0 240 132" preserveAspectRatio="xMidYMid slice">
-          <rect width="240" height="132" fill="#e9e7e1"/>
-          <path d="M-10 96 C 50 84, 90 70, 130 72 S 210 58, 260 40" stroke="#fff" stroke-width="14" fill="none"/>
-          <path d="M-10 96 C 50 84, 90 70, 130 72 S 210 58, 260 40" stroke="#f2b544" stroke-width="5" fill="none"/>
-          <path d="M70 -10 L 96 140 M 168 -10 L 150 140 M -10 30 L 250 18" stroke="#fff" stroke-width="6" fill="none"/>
-          <rect x="18" y="10" width="40" height="22" rx="3" fill="#d9d6ce"/><rect x="182" y="78" width="46" height="34" rx="3" fill="#d9d6ce"/><rect x="104" y="96" width="34" height="30" rx="3" fill="#cfe0c8"/>
-        </svg>
-        <span class="floc-pin"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5Z"/></svg></span>
+    <div class="fchap" data-chapters>
+      <div class="fchap-top">
+        <div class="fbars" aria-hidden="true"><span><i></i></span><span><i></i></span><span><i></i></span><span><i></i></span></div>
+        <button class="fsound" type="button" data-sound aria-pressed="false" aria-label="Sesi aç"><svg class="ico snd-on" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M4 9v6h4l5 4V5L8 9H4Z"/><path d="M16 8.5a5 5 0 0 1 0 7M18.5 6a8.5 8.5 0 0 1 0 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg><svg class="ico snd-off" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M4 9v6h4l5 4V5L8 9H4Z"/><path d="m16.5 9.5 5 5m0-5-5 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg><span>Sesi aç</span></button>
       </div>
-      <figcaption><span class="floc-title">Konum</span><span class="floc-meta">Gönderildi</span></figcaption>
-    </figure>
-
-    <div class="fjourney">
-      <ol class="fsteps">
-        <li class="fstep"><span class="fstep-n">1</span><h3>Konumunu gönder</h3><p>Ara ya da WhatsApp'tan konumunu at. Nerede olduğunu anlatmana gerek yok.</p></li>
-        <li class="fstep"><span class="fstep-n">2</span><h3>Servis yola çıkar</h3><p>Yola çıkmadan net ücreti söyleriz. Donanımlı servis aracı sana doğru gelir.</p></li>
-        <li class="fstep"><span class="fstep-n">3</span><h3>Yerinde çözülür</h3><p>Akü, lastik, yakıt ya da arıza. Çoğu iş orada biter, yoluna devam edersin.</p></li>
+      <ol class="fchap-list">
+        <li class="fchap-item is-on" data-at="0"><span class="fchap-n">1</span><div><h2 class="fchap-h">Konumunu gönder</h2><p>Ara ya da WhatsApp'tan konumunu at. Nerede olduğunu anlatmana gerek yok.</p></div></li><li class="fchap-item" data-at="7.3"><span class="fchap-n">2</span><div><h2 class="fchap-h">Servis yola çıkar</h2><p>Yola çıkmadan net ücreti söyleriz. Donanımlı servis aracı sana doğru gelir.</p></div></li><li class="fchap-item" data-at="14.6"><span class="fchap-n">3</span><div><h2 class="fchap-h">Yerinde çözülür</h2><p>Akü, lastik, yakıt ya da arıza. Çoğu iş orada biter.</p></div></li><li class="fchap-item" data-at="21.9"><span class="fchap-n">4</span><div><h2 class="fchap-h">Yoluna devam</h2><p>Çözülmezse aracını atölyemize biz getiririz. Usta var, dert yok.</p></div></li>
       </ol>
-      <div class="fmeter" aria-hidden="true"><span data-meter></span></div>
     </div>
-
-    <div class="ffinale" data-finale>
-      <p class="h1">Yoluna devam.</p>
-      <p class="lede">Çoğu arıza böyle biter. Seninki de bitsin.</p>
-    </div>
-
-    <p class="fcue" data-cue aria-hidden="true"><span></span>Kaydır, servis yola çıksın</p>
   </div>
+
+  <figure class="floc" aria-hidden="true" data-loc>
+    <div class="floc-map">
+      <svg viewBox="0 0 240 132" preserveAspectRatio="xMidYMid slice">
+        <rect width="240" height="132" fill="#e9e7e1"/>
+        <path d="M-10 96 C 50 84, 90 70, 130 72 S 210 58, 260 40" stroke="#fff" stroke-width="14" fill="none"/>
+        <path d="M-10 96 C 50 84, 90 70, 130 72 S 210 58, 260 40" stroke="#f2b544" stroke-width="5" fill="none"/>
+        <path d="M70 -10 L 96 140 M 168 -10 L 150 140 M -10 30 L 250 18" stroke="#fff" stroke-width="6" fill="none"/>
+        <rect x="18" y="10" width="40" height="22" rx="3" fill="#d9d6ce"/><rect x="182" y="78" width="46" height="34" rx="3" fill="#d9d6ce"/><rect x="104" y="96" width="34" height="30" rx="3" fill="#cfe0c8"/>
+      </svg>
+      <span class="floc-pin"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5Z"/></svg></span>
+    </div>
+    <figcaption><span class="floc-title">Konum</span><span class="floc-meta">Gönderildi</span></figcaption>
+  </figure>
 </section><section class="fsec">  <div class="wrap">
     <div class="picker" data-picker data-rise>
       <div class="picker-head"><h2 class="h3">Sorunun ne?</h2><p>Seç, mesajın hazır olsun. Tek dokunuşla WhatsApp'tan gönder.</p></div>
@@ -365,8 +360,6 @@
 </nav>
 <dialog class="lightbox" data-lightbox><button class="lb-close" type="button" aria-label="Kapat" data-lb-close><svg class="ico" aria-hidden="true"><use href="#i-x"/></svg></button><button class="lb-nav lb-prev" type="button" aria-label="Önceki" data-lb-prev><svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></button><figure><img alt=""><figcaption></figcaption></figure><button class="lb-nav lb-next" type="button" aria-label="Sonraki" data-lb-next><svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></button></dialog>
 <script src="assets/site.js?v=4" defer></script>
-<script src="assets/vendor/gsap.min.js"></script>
-<script src="assets/vendor/ScrollTrigger.min.js"></script>
-<script type="module" src="assets/flow.js?v=1"></script>
+<script src="assets/flow.js?v=2" defer></script>
 </body>
 </html>
